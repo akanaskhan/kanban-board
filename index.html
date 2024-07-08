@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="main-container">
+        <!-- <h1>Kanban Board App</h1> -->
+        <div id="signup-container" class="form-container" style="display: none;">
+            <h2>Sign Up</h2>
+            <input type="text" id="signup-username" placeholder="Username" required>
+            <input type="password" id="signup-password" placeholder="Password" required>
+            <button onclick="signUp()">Sign Up</button>
+            <p>Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+        </div>
+        <div id="login-container" class="form-container" style="display: none;">
+            <h2>Login</h2>
+            <input type="text" id="login-username" placeholder="Username" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button onclick="login()">Login</button>
+            <p>Don't have an account? <a href="#" onclick="showSignup()">Sign up here</a></p>
+        </div>
+        <div id="kanban-container" style="display: none;">
+            <h1>Kanban Board</h1>
+            <div class="board">
+                <div class="column" id="todo">
+                    <h2>To Do</h2>
+                    <div class="tasks" id="todo-tasks"></div>
+                    <input type="text" id="new-task" placeholder="New task">
+                    <button id="add-task" onclick="addTask()">Add Task</button>
+                </div>
+                <div class="column" id="in-progress">
+                    <h2>In Progress</h2>
+                    <div class="tasks" id="in-progress-tasks"></div>
+                </div>
+                <div class="column" id="done">
+                    <h2>Done</h2>
+                    <div class="tasks" id="done-tasks"></div>
+                </div>
+            </div>
+            <button class="but" onclick="logout()">Logout</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
